@@ -1,4 +1,5 @@
 import './AvailableMeals.css';
+import MealItemForm from './MealItemForm';
 
 const DUMMY_MEALS = [
   {
@@ -38,6 +39,7 @@ const AvailableMeals = () => {
               <p className="description">{meal.description}</p>
               <span className="price">${meal.price.toFixed(2)}</span>
             </div>
+            <MealItemForm />
           </li>
         ))}
       </ul>
