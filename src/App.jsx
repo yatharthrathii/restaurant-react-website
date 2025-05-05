@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import MealsSummary from './components/MealsSummary'
 import AvailableMeals from './components/AvailableMeals';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <MealsSummary />
       <AvailableMeals />
+      <Cart />
     </>
   )
 }

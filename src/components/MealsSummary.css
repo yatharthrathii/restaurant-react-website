@@ -1,4 +1,4 @@
-.summary {
+.meal-summary {
     max-width: 45rem;
     width: 80%;
     margin: -8rem auto 2rem auto; 
@@ -13,42 +13,42 @@
     transition: all 0.3s ease;
   }
   
-  .summary h2 {
+  .meal-summary h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
   
-  .summary p {
+  .meal-summary p {
     font-size: 1.1rem;
     line-height: 1.6;
   }
   
   /*  Tablet Screens */
   @media (max-width: 768px) {
-    .summary {
+    .meal-summary {
       padding: 1.5rem;
     }
   
-    .summary h2 {
+    .meal-summary h2 {
       font-size: 1.7rem;
     }
   
-    .summary p {
+    .meal-summary p {
       font-size: 1rem;
     }
   }
   
   /* Mobile Screens */
   @media (max-width: 480px) {
-    .summary {
+    .meal-summary {
       padding: 1rem;
     }
   
-    .summary h2 {
+    .meal-summary h2 {
       font-size: 1.4rem;
     }
   
-    .summary p {
+    .meal-summary p {
       font-size: 0.95rem;
     }
   }
