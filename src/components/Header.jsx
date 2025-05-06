@@ -1,6 +1,11 @@
+// Header.jsx
+import { useContext } from 'react';
+import CartContext from '../store/CartContext'; 
 import './Header.css';
 
 const Header = (props) => {
+  const cartCtx = useContext(CartContext);
+
   return (
     <>
       <header className="header">
@@ -8,7 +13,7 @@ const Header = (props) => {
         <button className="cart-button" onClick={props.onShowCart}>
           <span className="cart-icon">🛒</span>
           <span>Your Cart</span>
-          <span className="cart-badge">0</span>
+          <span className="cart-badge">{cartCtx.totalItems}</span> 
         </button>
       </header>
       <div className="main-image">
