@@ -1,5 +1,23 @@
-.cart {
-  padding: 1rem;
+.cart-item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cart-item-actions button {
+  background-color: #8a2b06;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+}
+
+.cart-item-actions button:hover {
+  background-color: #7a1e05;
 }
 
 .summary {

@@ -4,8 +4,17 @@ import './Cart.css';
 import CartContext from '../../store/CartContext';
 
 const Cart = (props) => {
-  const cartCtx = useContext(CartContext); 
-  const totalAmount = `₹${cartCtx.totalAmount.toFixed(2)}`;
+  const cartCtx = useContext(CartContext);
+
+  const totalAmount = `₹${cartCtx.totalAmount <= 0 ? '0.00' : cartCtx.totalAmount.toFixed(2)}`;
+
+  const addItemHandler = (id) => {
+    cartCtx.addItem({ id, amount: 1, price: cartCtx.items.find(item => item.id === id).price });
+  };
+
+  const removeItemHandler = (id) => {
+    cartCtx.removeItem(id);
+  };
 
   return (
     <Modal onClose={props.onClose}>
@@ -13,7 +22,13 @@ const Cart = (props) => {
         <ul>
           {cartCtx.items.map((item) => (
             <li key={item.id}>
-              {item.name} x {item.amount} — ₹{(item.price * item.amount).toFixed(2)}
+              <div className="cart-item-details">
+                <span>{item.name} x {item.amount} — ₹{(item.price * item.amount).toFixed(2)}</span>
+                <div className="cart-item-actions">
+                  <button onClick={() => removeItemHandler(item.id)}>-</button>
+                  <button onClick={() => addItemHandler(item.id)}>+</button>
+                </div>
+              </div>
             </li>
           ))}
         </ul>
